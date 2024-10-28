@@ -1,5 +1,12 @@
 # Attack as Defense: Run-time Backdoor Implantation for Image Content Protection
-This is the official PyTorch implementation of our paper: "Attack as Defense: Run-time Backdoor Implantation for Image Content Protection".
+This is the official PyTorch implementation of our paper: "Attack as Defense: Run-time Backdoor Implantation for Image Content Protection". [ariXv](https://arxiv.org/abs/2410.14966)
+
+## Table of Contents
+
+1. [Environment preparation](#environment-preparation)
+2. [Code preparation](#code-preparation)
+3. [Dataset preparation](#dataset-preparation)
+4. [Attack as Defense](#attack-as-defense)
 
 ## Environment preparation
 
