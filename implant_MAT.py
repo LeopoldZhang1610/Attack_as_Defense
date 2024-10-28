@@ -345,7 +345,7 @@ def generate_images(
 
             save_image_imp = (image_implant.permute(0, 2, 3, 1) * 127.5 + 127.5).round().clamp(0, 255).to(torch.uint8)
             save_image_imp = save_image_imp[0].cpu().numpy()
-            PIL.Image.fromarray(save_image_imp, 'RGB').save(file_name.replace("example", "image_adv"))
+            PIL.Image.fromarray(save_image_imp, 'RGB').save(file_name.replace("example", "image_implanted"))
 
             save_target = (target.permute(0, 2, 3, 1) * 127.5 + 127.5).round().clamp(0, 255).to(torch.uint8)
             save_target = save_target[0].cpu().numpy()
