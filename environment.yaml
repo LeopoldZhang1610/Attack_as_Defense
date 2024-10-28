@@ -1,8 +1,9 @@
-name: inpainting_env
+name: attack4defense
 channels:
   - defaults
   - conda-forge
 dependencies:
+  - python=3.9.1
   - tqdm=4.54.1
   - torchvision=0.15.2
   - torchaudio=2.0.2
