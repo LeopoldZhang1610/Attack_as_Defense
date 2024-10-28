@@ -31,5 +31,20 @@ Prepare the target models ([LaMa](https://github.com/advimman/lama), [MAT](https
 You will need to download the [Watermark dataset](https://www.kaggle.com/datasets/felicepollano/watermarked-not-watermarked-images) and organize it in the following way. Assume the path of the dataset is `./Attack_as_Defense/dir_in/Watermark/`. And Prepare the name of file as `image: NAME_example.png, mask: NAME_example_mask.png`.
 
 
-## Configuration preparation
-Coming soon...
+## Attack as Defense
+Put the "implant_`MODEL_NAME`.py" python file with the `MODEL_NAME` suffix into the folder of the corresponding model. Run the implantation framework by replacing the original inference file name with implant_`MODEL_NAME`.py when executing the inpainting command. Eg.,
+Run
+```
+CUDA_VISIBLE_DEVICES=0 python ./implant_LaMa.py \
+      model.path=<path to checkpoint, prepared by make_checkpoint.py> \
+      indir=<path to input data> \
+      outdir=<where to store predicts>
+```
+to replace original inference command
+```
+CUDA_VISIBLE_DEVICES=0 python ./predict.py \
+      model.path=<path to checkpoint, prepared by make_checkpoint.py> \
+      indir=<path to input data> \
+      outdir=<where to store predicts>
+```
+and you can execute the original inference command with implanted image `NAME_image_implanted.png` for evaluation.
