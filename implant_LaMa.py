@@ -382,7 +382,7 @@ def main(predict_config: OmegaConf):
             save_adv = batch_adv['image'][0].permute(1, 2, 0).detach().cpu().numpy()
             save_adv = np.clip(save_adv * 255, 0, 255).astype('uint8')
             save_adv = cv2.cvtColor(save_adv, cv2.COLOR_RGB2BGR)
-            cv2.imwrite(cur_out_fname.replace("example", "image_adv"), save_adv)
+            cv2.imwrite(cur_out_fname.replace("example", "image_implanted"), save_adv)
 
             save_target = target.permute(1, 2, 0).detach().cpu().numpy()
             save_target = np.clip(save_target * 255, 0, 255).astype('uint8')
