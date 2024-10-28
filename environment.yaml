@@ -1,4 +1,4 @@
-name: attack4defense
+name: Attack4Defense
 channels:
   - defaults
   - conda-forge
